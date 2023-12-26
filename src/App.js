@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"; // import useState
 
-import NoteContainer from "./Components/NoteContainer/NoteContainer.css";
-import Sidebar from "./Components/Sidebar/Sidebar.css";
+import NoteContainer from "./Components/NoteContainer/NoteContainer.css"; // import NoteContainer
+import Sidebar from "./Components/Sidebar";
 
 import "./src/App.css";
 
-function App() {
-  const [notes, setNotes] = useState(
-    JSON.parse(localStorage.getItem("notes-app")) || []
+function App() { // create App function
+  const [notes, setNotes] = useState( // create useState
+    JSON.parse(localStorage.getItem("notes-app")) || [] // create JSON.parse
   );
 
-  const addNote = (color) => {
-    const tempNotes = [...notes];
+  const addNote = (color) => { // create addNote function
+    const tempNotes = [...notes]; // create tempNotes
 
-    tempNotes.push({
-      id: Date.now() + "" + Math.floor(Math.random() * 78),
+    tempNotes.push({ // create tempNotes.push
+      id: Date.now() + "" + Math.floor(Math.random() * 78), // create id
       text: "",
       time: Date.now(),
       color,
@@ -22,34 +22,34 @@ function App() {
     setNotes(tempNotes);
   };
 
-  const deleteNote = (id) => {
-    const tempNotes = [...notes];
+  const deleteNote = (id) => { // create deleteNote function
+    const tempNotes = [...notes]; // create tempNotes
 
-    const index = tempNotes.findIndex((item) => item.id === id);
-    if (index < 0) return;
+    const index = tempNotes.findIndex((item) => item.id === id); // create index
+    if (index < 0) return; // create if statement
 
-    tempNotes.splice(index, 1);
-    setNotes(tempNotes);
+    tempNotes.splice(index, 1); // create splice
+    setNotes(tempNotes); // create setNotes
   };
 
-  const updateText = (text, id) => {
-    const tempNotes = [...notes];
+  const updateText = (text, id) => { // create updateText function
+    const tempNotes = [...notes]; // create tempNotes
 
-    const index = tempNotes.findIndex((item) => item.id === id);
-    if (index < 0) return;
+    const index = tempNotes.findIndex((item) => item.id === id); // create index
+    if (index < 0) return; // create if statement
 
-    tempNotes[index].text = text;
-    setNotes(tempNotes);
+    tempNotes[index].text = text; // create tempNotes[index].text
+    setNotes(tempNotes); // create setNotes
   };
 
-  useEffect(() => {
-    localStorage.setItem("notes-app", JSON.stringify(notes));
+  useEffect(() => { // create useEffect
+    localStorage.setItem("notes-app", JSON.stringify(notes)); // create localStorage.setItem
   }, [notes]);
 
-  return (
-    <div className="App">
-      <Sidebar addNote={addNote} />
-      <NoteContainer
+  return ( // create return
+    <div className="App"> 
+      <Sidebar addNote={addNote} /> 
+      <NoteContainer // create NoteContainer
         notes={notes}
         deleteNote={deleteNote}
         updateText={updateText}
@@ -58,4 +58,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // export App
