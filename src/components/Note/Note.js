@@ -10,8 +10,8 @@ function Note(props) { // create Note function
   const formatDate = (value) => { // create formatDate function
     if (!value) return ""; // create if statement
 
-    const date = new Date(value); // create date
-    const monthNames = [ // create monthNames
+    const date = new Date(value);
+    const monthNames = [
       "Jan",
       "Feb",
       "March",
@@ -50,7 +50,7 @@ function Note(props) { // create Note function
   };
 
   return ( // create return
-    <div className="note" style={{ backgroundColor: props.note.color }}> // create note
+    <div className="note" style={{ backgroundColor: props.note.color }}>
       <textarea 
         className="note_text"
         defaultValue={props.note.text} 

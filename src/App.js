@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"; // import useState
 
-import NoteContainer from "./Components/NoteContainer/NoteContainer.css"; // import NoteContainer
-import Sidebar from "./Components/Sidebar";
+import NoteContainer from "./components/NoteContainer/NoteContainer";
+import Sidebar from "./components/Sidebar/Sidebar";
 
-import "./src/App.css";
+import "./App.css";
 
 function App() { // create App function
   const [notes, setNotes] = useState( // create useState

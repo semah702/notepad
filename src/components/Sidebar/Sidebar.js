@@ -10,9 +10,9 @@ function Sidebar(props) {
   const [listOpen, setListOpen] = useState(false); // create useState
 
   return (
-    <div className="sidebar"> // create sidebar
-      <img src={plusIcon} alt="Add" onClick={() => setListOpen(!listOpen)} /> // create onClick
-      <ul className={`sidebar_list ${listOpen ? "sidebar_list_active" : ""}`}> // create className
+    <div className="sidebar">
+      <img src={plusIcon} alt="Add" onClick={() => setListOpen(!listOpen)} />
+      <ul className={`sidebar_list ${listOpen ? "sidebar_list_active" : ""}`}>
         {colors.map((item, index) => ( // create colors.map
           <li 
             key={index} 

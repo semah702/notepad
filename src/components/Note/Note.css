@@ -1,17 +1,17 @@
 .note {
-    padding: 25px; // 1.5625rem = 25px
+    padding: 25px; /* 1.5625rem = 25px */ 
     height: 280px;
     width: 260px; 
     display: flex;
-    flex-direction: column; // default
-    background-color: blueviolet; // #8a2be2
+    flex-direction: column; /* default */
+    background-color: blueviolet; /* #8a2be2 */
     border-radius: 30px;
   }
   
   .note_text {
-    flex: 1; // 100%
-    resize: none; // default
-    background-color: transparent; // default
+    flex: 1; /* 100% */
+    resize: none; /* default */
+    background-color: transparent; /* default */
     font-size: 1rem;
     line-height: 1.875rem;
     outline: none;
@@ -25,7 +25,7 @@
   }
   
   .note_footer img {
-    cursor: pointer; /
+    cursor: pointer; 
     opacity: 0;
     transition: 300ms;
   }
