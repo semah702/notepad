@@ -4,7 +4,7 @@
     width: 260px; 
     display: flex;
     flex-direction: column; /* default */
-    background-color: blueviolet; /* #8a2be2 */
+    background-color: rgb(94, 32, 153); /* #8a2be2 */
     border-radius: 30px;
   }
   
