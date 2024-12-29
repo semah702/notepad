@@ -2,6 +2,8 @@
 
 NotePad is a note app.
 
+Preview on Snack Expo: [@semah702/notepadapp](https://snack.expo.dev/@semah702/notepadapp)
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install NotePad.
